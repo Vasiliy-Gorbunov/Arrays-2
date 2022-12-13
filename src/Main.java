@@ -2,6 +2,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
 
     public static int[] generateRandomArray() {
@@ -14,6 +15,7 @@ public class Main {
     }
 
     public static void task1() {
+        System.out.println("Задание 1");
         int[] arr = generateRandomArray();
         int sum = 0;
         for (int day : arr) {
@@ -30,6 +32,7 @@ public class Main {
     }
 
     public static void task2() {
+        System.out.println("Задание 2");
         int[] arr = generateRandomArray();
         int min = arr[0];
         int max = arr[0];
@@ -40,7 +43,18 @@ public class Main {
                 min = day;
             }
         }
-        System.out.printf("Минимальная сумма трат за день составила %d рублей. Максимальная сумма трат за день составила %d рублей", min, max);
+        System.out.printf("Минимальная сумма трат за день составила %d рублей. Максимальная сумма трат за день составила %d рублей%n", min, max);
     }
 
+    public static void task3() {
+        System.out.println("Задание 3");
+        int[] arr = generateRandomArray();
+        int sum = 0;
+        for (int day : arr) {
+            sum += day;
+        }
+        float averageConsumption = (float) sum / arr.length;
+        float penny = (averageConsumption%1)*100;
+        System.out.printf("Средняя сумма трат за месяц составила %.0f рублей %.0f копеек%n", averageConsumption, penny);
+    }
 }
