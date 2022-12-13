@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        //task1();
+        task1();
     }
 
     public static int[] generateRandomArray() {
@@ -12,5 +12,12 @@ public class Main {
         return arr;
     }
 
-
+    public static void task1() {
+        int[] arr = generateRandomArray();
+        int sum = 0;
+        for (int element:arr) {
+            sum += element;
+        }
+        System.out.printf("Сумма трат за месяц составила %d рублей", sum);
+    }
 }
