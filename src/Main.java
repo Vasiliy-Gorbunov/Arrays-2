@@ -1,8 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        task1();
-        task2();
-        task3();
+        //task1();
+        //task2();
+        //task3();
+        task4();
     }
 
     public static int[] generateRandomArray() {
@@ -54,7 +55,15 @@ public class Main {
             sum += day;
         }
         float averageConsumption = (float) sum / arr.length;
-        float penny = (averageConsumption%1)*100;
+        float penny = (averageConsumption % 1) * 100;
         System.out.printf("Средняя сумма трат за месяц составила %.0f рублей %.0f копеек%n", averageConsumption, penny);
+    }
+
+    public static void task4() {
+        System.out.println("Задание 4");
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int index = reverseFullName.length - 1; index >= 0; index--) {
+            System.out.print(reverseFullName[index]);
+        }
     }
 }
